@@ -183,6 +183,55 @@ section {
 }
 
 /* ============================================================================
+   BOOKING HOOK BANNER
+   ============================================================================ */
+
+.booking-hook {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    padding: var(--spacing-md) var(--spacing-sm);
+    position: sticky;
+    top: 0;
+    z-index: 95;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-hook-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.booking-hook-text {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.booking-hook-btn {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.625rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.booking-hook-btn:hover {
+    background-color: var(--color-accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================================================
    NAVIGATION
    ============================================================================ */
 
@@ -876,6 +925,20 @@ input[type="checkbox"] {
 }
 
 .footer-section a:hover {
+    color: var(--color-accent-light);
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: var(--spacing-sm) 0;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.social-link:hover {
+    transform: translateX(4px);
     color: var(--color-accent-light);
 }
 

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Melone Grove - Persönliche Entwicklung, Coaching und Workshops für Nervensystemregulation">
+    <title>Melone Grove - Coaching & Workshops</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <p data-i18n="cookie_message">Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Sie können diese Einstellungen jederzeit ändern.</p>
+            <div class="cookie-actions">
+                <button id="cookieReject" class="btn-secondary" data-i18n="cookie_reject">Ablehnen</button>
+                <button id="cookieSettings" class="btn-secondary" data-i18n="cookie_settings">Einstellungen</button>
+                <button id="cookieAccept" class="btn-primary" data-i18n="cookie_accept">Akzeptieren</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#home">Melone Grove</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#home" class="nav-link" data-i18n="nav_home">Startseite</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav_about">Über uns</a></li>
+                <li><a href="#offers" class="nav-link" data-i18n="nav_offers">Angebote</a></li>
+                <li><a href="#approach" class="nav-link" data-i18n="nav_approach">Ansatz</a></li>
+                <li><a href="#news" class="nav-link" data-i18n="nav_news">News</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Kontakt</a></li>
+                <li class="lang-switcher">
+                    <button id="langToggle" class="lang-btn" title="Toggle language">
+                        <span class="lang-flag">🇩🇪</span>
+                        <span class="lang-text">DE</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero_title">Melone Grove</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Persönliche Entwicklung durch achtsame Begleitung und bewährte Methoden</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_contact">Kontakt aufnehmen</a>
+                <a href="#offers" class="btn btn-secondary" data-i18n="hero_cta_offers">Angebote ansehen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about_title">Über Melone Grove</h2>
+            <p class="section-intro" data-i18n="about_intro">
+                Melone Grove bietet spezialisierte Coaching-, Workshop- und Online-Programme zur Unterstützung deiner persönlichen Entwicklung.
+            </p>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3 data-i18n="about_card_1_title">Nervensystemregulation</h3>
+                    <p data-i18n="about_card_1_text">Erfahre, wie du dein Nervensystem beruhigen und regulieren kannst für mehr innere Stabilität und Wohlbefinden.</p>
+                </div>
+                <div class="about-card">
+                    <h3 data-i18n="about_card_2_title">Stressabbau</h3>
+                    <p data-i18n="about_card_2_text">Lerne praktische Techniken und Methoden, um Stress zu bewältigen und deine Resilienz zu stärken.</p>
+                </div>
+                <div class="about-card">
+                    <h3 data-i18n="about_card_3_title">Persönliche Entwicklung</h3>
+                    <p data-i18n="about_card_3_text">Unterstützung auf deinem Weg zu mehr Klarheit, Selbstbewusstsein und authentischem Wachstum.</p>
+                </div>
+                <div class="about-card">
+                    <h3 data-i18n="about_card_4_title">Achtsamkeit & Präsenz</h3>
+                    <p data-i18n="about_card_4_text">Entwickle eine tiefere Verbindung zu dir selbst durch achtsame und ganzheitliche Ansätze.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers">
+        <div class="container">
+            <h2 class="section-title" data-i18n="offers_title">Angebote</h2>
+            <p class="section-intro" data-i18n="offers_intro">Wähle das Programm, das zu dir passt</p>
+
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-icon" data-i18n="offer_1_icon">🎯</div>
+                    <h3 data-i18n="offer_1_title">Online Coaching</h3>
+                    <p data-i18n="offer_1_text">Individuelle 1:1 Begleitung, flexibel und ortsunabhängig. Wir arbeiten gemeinsam an deinen persönlichen Zielen und Herausforderungen.</p>
+                    <a href="#contact" class="btn-link" data-i18n="offer_1_link">Mehr erfahren →</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon" data-i18n="offer_2_icon">👥</div>
+                    <h3 data-i18n="offer_2_title">Workshops</h3>
+                    <p data-i18n="offer_2_text">Interaktive Workshops in kleinen Gruppen mit praktischen Übungen zu Nervensystemregulation und persönlichem Wachstum.</p>
+                    <a href="#contact" class="btn-link" data-i18n="offer_2_link">Termine ansehen →</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon" data-i18n="offer_3_icon">📚</div>
+                    <h3 data-i18n="offer_3_title">Digitale Inhalte</h3>
+                    <p data-i18n="offer_3_text">Lern- und Übungsmaterialien als Online-Kurse, Videos und Workbooks - in deinem Tempo, jederzeit verfügbar.</p>
+                    <a href="#contact" class="btn-link" data-i18n="offer_3_link">Katalog entdecken →</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon" data-i18n="offer_4_icon">🌱</div>
+                    <h3 data-i18n="offer_4_title">Begleitende Programme</h3>
+                    <p data-i18n="offer_4_text">Umfassende, längerfristige Programme mit wöchentlicher Unterstützung, Lernmaterialien und Gemeinschaft.</p>
+                    <a href="#contact" class="btn-link" data-i18n="offer_4_link">Programme entdecken →</a>
+                </div>
+            </div>
+
+            <div class="disclaimer-box">
+                <p data-i18n="disclaimer"><strong>Wichtiger Hinweis:</strong> Unsere Angebote dienen der persönlichen Entwicklung und ersetzen keine medizinische, psychotherapeutische oder psychiatrische Behandlung. Es werden keine Heilversprechen abgegeben.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="approach">
+        <div class="container">
+            <h2 class="section-title" data-i18n="approach_title">Unser Ansatz</h2>
+            <div class="approach-content">
+                <div class="approach-item">
+                    <h3 data-i18n="approach_1_title">Ehrlich & Transparent</h3>
+                    <p data-i18n="approach_1_text">Wir arbeiten achtsam und sind transparent: Unsere Angebote unterstützen persönliche Entwicklung. Wir geben keine Heilversprechen und arbeiten nicht als Ersatz für medizinische oder therapeutische Fachbetreuung.</p>
+                </div>
+                <div class="approach-item">
+                    <h3 data-i18n="approach_2_title">Selbstverantwortung</h3>
+                    <p data-i18n="approach_2_text">Du trägst Verantwortung für deinen Weg. Wir begleiten dich mit bewährten Methoden und unterstützen deine Eigenverantwortung auf dem Weg zu Wohlbefinden und Wachstum.</p>
+                </div>
+                <div class="approach-item">
+                    <h3 data-i18n="approach_3_title">Trauma-sensitiv & Geerdet</h3>
+                    <p data-i18n="approach_3_text">Unser Ansatz ist traumasensitiv, ruhig und geerdet. Wir schaffen einen sicheren Raum für tiefe Arbeit und respektieren deine Grenzen in jedem Moment.</p>
+                </div>
+                <div class="approach-item">
+                    <h3 data-i18n="approach_4_title">Ganzheitlich</h3>
+                    <p data-i18n="approach_4_text">Wir berücksichtigen Körper, Geist und Seele. Nervensystemregulation, emotionale Integration und persönliches Wachstum sind integriert in all unseren Angeboten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <h2 class="section-title" data-i18n="news_title">News & Updates</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-date" data-i18n="news_1_date">2. Juni 2024</div>
+                    <h3 data-i18n="news_1_title">Neuer Online-Kurs startet</h3>
+                    <p data-i18n="news_1_text">Unser neuer Kurs "Nervensystemregulation für Anfänger" startet am 15. Juni. Alle Informationen und Anmeldung auf Anfrage.</p>
+                    <a href="#contact" class="btn-link" data-i18n="news_1_link">Mehr erfahren →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-date" data-i18n="news_2_date">20. Mai 2024</div>
+                    <h3 data-i18n="news_2_title">Sommerprogramm 2024 angekündigt</h3>
+                    <p data-i18n="news_2_text">Unsere Sommerwerkstätten und Coaching-Angebote sind buchbar. Begrenzte Plätze verfügbar.</p>
+                    <a href="#contact" class="btn-link" data-i18n="news_2_link">Jetzt buchen →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-date" data-i18n="news_3_date">1. Mai 2024</div>
+                    <h3 data-i18n="news_3_title">Melone Grove startet offiziell</h3>
+                    <p data-i18n="news_3_text">Willkommen! Melone Grove öffnet seine Türen und freut sich, dich auf deinem Weg der persönlichen Entwicklung zu begleiten.</p>
+                    <a href="#about" class="btn-link" data-i18n="news_3_link">Erfahre mehr →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact_title">Kontakt aufnehmen</h2>
+            <p class="section-intro" data-i18n="contact_intro">Sende uns eine Nachricht und wir melden uns schnell bei dir zurück.</p>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name" data-i18n="form_name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="form_email">E-Mail *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-i18n="form_message">Nachricht *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="gdpr" name="gdpr" required>
+                    <label for="gdpr" data-i18n="form_gdpr">Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *</label>
+                </div>
+                <button type="submit" class="btn btn-primary" data-i18n="form_submit">Senden</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="footer_title">Melone Grove</h4>
+                    <p data-i18n="footer_description">Persönliche Entwicklung und Coaching für ein erfülltes Leben.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer_links">Links</h4>
+                    <ul>
+                        <li><a href="impressum.html" data-i18n="footer_legal_impressum">Impressum</a></li>
+                        <li><a href="datenschutz.html" data-i18n="footer_legal_datenschutz">Datenschutzerklärung</a></li>
+                        <li><a href="agb.html" data-i18n="footer_legal_agb">AGB</a></li>
+                        <li><a href="#" id="cookieSettingsFooter" data-i18n="footer_legal_cookies">Cookie-Einstellungen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer_contact">Kontakt</h4>
+                    <p>Fragen? <a href="#contact" data-i18n="footer_contact_form">Schreib uns über das Kontaktformular</a>.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2024 Melone Grove. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

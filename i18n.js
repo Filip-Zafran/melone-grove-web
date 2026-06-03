@@ -5,6 +5,10 @@
 
 const translations = {
     de: {
+        // Booking Hook Banner
+        booking_hook_text: '✨ Termin buchen',
+        booking_hook_cta: 'Online Termin vereinbaren',
+
         // Navigation
         nav_home: 'Startseite',
         nav_about: 'Über uns',
@@ -20,6 +24,8 @@ const translations = {
         hero_cta_offers: 'Angebote ansehen',
 
         // About Section
+        about_section_title: 'Über Melone Grove',
+        about_section_intro: 'Melone Grove wurde von Melanie und Simone gegründet – zwei erfahrene Hebammen mit vielfältiger Expertise in persönlicher Entwicklung, Gesundheit und ganzheitlichem Wohlbefinden.',
         about_title: 'Über Melone Grove',
         about_intro: 'Melone Grove bietet spezialisierte Coaching-, Workshop- und Online-Programme zur Unterstützung deiner persönlichen Entwicklung.',
         about_card_1_title: 'Nervensystemregulation',
@@ -31,39 +37,60 @@ const translations = {
         about_card_4_title: 'Achtsamkeit & Präsenz',
         about_card_4_text: 'Entwickle eine tiefere Verbindung zu dir selbst durch achtsame und ganzheitliche Ansätze.',
 
+        // Team Members
+        team_melanie_name: 'Melanie',
+        team_melanie_title: 'Hebamme, Yoga-Lehrerin, Massagetherapeutin',
+        team_melanie_bio: 'Seit meinem Hebammenexamen 2001 in Tübingen begleite ich Frauen mit Fokus auf Rückbildung, Beckenbodenstabilität und Frauengesundheit. Mein Weg führte mich durch umfassende Ausbildungen: Yoga (seit 2007, zertifiziert in Katonah Yoga® 2023), Massage (Ayurveda, Lomi Lomi, Mannea-Methode) und SarWork. Ergänzt durch Fachwissen in Prävention (2014), Hypnose (2018), Kinesiologie und Atemarbeit (seit 2019). Heute halte ich Breathwork-Sessions, leite Firmenyoga und entwickle individuelle Gesundheitspläne. Seit 2025 bilde ich mich in Neurointegrativen Traumasensiblen Coaching weiter. Ich freue mich, mit meinem Know-How neue, spannende Wege zu gehen.',
+        team_simone_name: 'Simone',
+        team_simone_title: 'Hebamme, Spezialistin für außerklinische Geburtshilfe',
+        team_simone_bio: '"Ohne Liebe ist es nur handwerkliches Geschick." – Leboyer Nach meinem Hebammenexamen in Marburg/Lahn 1996 und klinischer Geburtshilfe bis 2001 bin ich in die Freiberuflichkeit gewechselt. Mit außerklinischen Geburten und der Zusammenarbeit mit gynäkologischen Praxen ist dies mein Weg geblieben. 2009 zog ich nach Berlin, wo ich weiterhin außerklinische Geburtshilfe in Geburthäusern praktiziere. Hebamme zu sein ist nach all den Jahren immer noch das Beste, das mir passieren konnte. Mit Pausen für Elternzeit begleite ich Frauen durch diese intensive, wunderbare Zeit mit großer Hingabe und Erfahrung.',
+
         // Offers Section
+        offers_section_title: 'Angebote',
+        offers_section_intro: 'Unsere Leistungen für dein Wohlbefinden',
         offers_title: 'Angebote',
         offers_intro: 'Wähle das Programm, das zu dir passt',
+        offer_1_title: 'Coaching & Begleitung',
+        offer_1_desc: 'Persönliche 1:1 Unterstützung für Nervensystemregulation, Stressabbau und persönliche Entwicklung. Online und flexibel.',
         offer_1_icon: '🎯',
-        offer_1_title: 'Online Coaching',
         offer_1_text: 'Individuelle 1:1 Begleitung, flexibel und ortsunabhängig. Wir arbeiten gemeinsam an deinen persönlichen Zielen und Herausforderungen.',
         offer_1_link: 'Mehr erfahren →',
+        offer_2_title: 'Massage & Körperarbeit',
+        offer_2_desc: 'Ayurvedische, Lomi Lomi und spezialisierte Massagen für Frauengesundheit. Auch für Schwangere geeignet.',
         offer_2_icon: '👥',
-        offer_2_title: 'Workshops',
         offer_2_text: 'Interaktive Workshops in kleinen Gruppen mit praktischen Übungen zu Nervensystemregulation und persönlichem Wachstum.',
         offer_2_link: 'Termine ansehen →',
+        offer_3_title: 'Mutterschaftsvorsorge',
+        offer_3_desc: 'Individuelle medizinische Vorsorge und persönliche Begleitung während Schwangerschaft. Achtsam, ruhig und auf Augenhöhe.',
         offer_3_icon: '📚',
-        offer_3_title: 'Digitale Inhalte',
         offer_3_text: 'Lern- und Übungsmaterialien als Online-Kurse, Videos und Workbooks - in deinem Tempo, jederzeit verfügbar.',
         offer_3_link: 'Katalog entdecken →',
+        offer_4_title: 'Hilfe bei Schwangerschaftsbeschwerden',
+        offer_4_desc: 'Lösungen für Schwangerschaftsbeschwerden durch Verständnis, Fachwissen und individuelle Begleitung.',
         offer_4_icon: '🌱',
-        offer_4_title: 'Begleitende Programme',
         offer_4_text: 'Umfassende, längerfristige Programme mit wöchentlicher Unterstützung, Lernmaterialien und Gemeinschaft.',
         offer_4_link: 'Programme entdecken →',
+        offer_cta: 'Termin buchen →',
         disclaimer: 'Wichtiger Hinweis: Unsere Angebote dienen der persönlichen Entwicklung und ersetzen keine medizinische, psychotherapeutische oder psychiatrische Behandlung. Es werden keine Heilversprechen abgegeben.',
 
         // Approach Section
+        approach_section_title: 'Unser Ansatz',
         approach_title: 'Unser Ansatz',
+        approach_1_heading: 'Ehrlich & Transparent',
         approach_1_title: 'Ehrlich & Transparent',
         approach_1_text: 'Wir arbeiten achtsam und sind transparent: Unsere Angebote unterstützen persönliche Entwicklung. Wir geben keine Heilversprechen und arbeiten nicht als Ersatz für medizinische oder therapeutische Fachbetreuung.',
+        approach_2_heading: 'Selbstverantwortung',
         approach_2_title: 'Selbstverantwortung',
         approach_2_text: 'Du trägst Verantwortung für deinen Weg. Wir begleiten dich mit bewährten Methoden und unterstützen deine Eigenverantwortung auf dem Weg zu Wohlbefinden und Wachstum.',
+        approach_3_heading: 'Trauma-sensitiv & Geerdet',
         approach_3_title: 'Trauma-sensitiv & Geerdet',
         approach_3_text: 'Unser Ansatz ist traumasensitiv, ruhig und geerdet. Wir schaffen einen sicheren Raum für tiefe Arbeit und respektieren deine Grenzen in jedem Moment.',
+        approach_4_heading: 'Ganzheitlich',
         approach_4_title: 'Ganzheitlich',
         approach_4_text: 'Wir berücksichtigen Körper, Geist und Seele. Nervensystemregulation, emotionale Integration und persönliches Wachstum sind integriert in all unseren Angeboten.',
 
         // News Section
+        news_section_title: 'News & Insights',
         news_title: 'News & Updates',
         news_1_date: '2. Juni 2024',
         news_1_title: 'Neuer Online-Kurs startet',
@@ -120,6 +147,10 @@ const translations = {
     },
 
     en: {
+        // Booking Hook Banner
+        booking_hook_text: '✨ Book an Appointment',
+        booking_hook_cta: 'Book Appointment Online',
+
         // Navigation
         nav_home: 'Home',
         nav_about: 'About',
@@ -135,6 +166,8 @@ const translations = {
         hero_cta_offers: 'View Offers',
 
         // About Section
+        about_section_title: 'About Melone Grove',
+        about_section_intro: 'Melone Grove was founded by Melanie and Simone – two experienced midwives with diverse expertise in personal development, health, and holistic well-being.',
         about_title: 'About Melone Grove',
         about_intro: 'Melone Grove offers specialized coaching, workshops, and online programs to support your personal development.',
         about_card_1_title: 'Nervous System Regulation',
@@ -146,39 +179,60 @@ const translations = {
         about_card_4_title: 'Mindfulness & Presence',
         about_card_4_text: 'Develop a deeper connection to yourself through mindful and holistic approaches.',
 
+        // Team Members
+        team_melanie_name: 'Melanie',
+        team_melanie_title: 'Midwife, Yoga Instructor, Massage Therapist',
+        team_melanie_bio: 'Since my midwifery degree in Tübingen in 2001, I have accompanied women with a focus on postpartum recovery, pelvic floor stability, and women\'s health. My path has taken me through comprehensive training: Yoga (since 2007, certified in Katonah Yoga® 2023), Massage (Ayurveda, Lomi Lomi, Mannea Method) and SarWork. Complemented by expertise in prevention (2014), hypnosis (2018), kinesiology and breathwork (since 2019). Today I facilitate breathwork sessions, lead corporate yoga, and develop individual wellness plans. Since 2025 I am training in Neuro-Integrative Trauma-Sensitive Coaching. I look forward to exploring new and exciting paths with my knowledge.',
+        team_simone_name: 'Simone',
+        team_simone_title: 'Midwife, Specialist in Out-of-Hospital Birth Care',
+        team_simone_bio: '"Without love it is merely craftsmanship." – Leboyer After my midwifery degree in Marburg/Lahn in 1996 and clinical obstetrics until 2001, I transitioned to self-employment. With out-of-hospital births and collaboration with gynecological practices, this path has remained my focus. In 2009 I moved to Berlin, where I continue practicing out-of-hospital birth care in birthing centers. Being a midwife, after all these years, remains the best thing that could have happened to me. With breaks for parental leave, I accompany women through this intense, wonderful time with great dedication and experience.',
+
         // Offers Section
+        offers_section_title: 'Offers',
+        offers_section_intro: 'Our Services for Your Well-Being',
         offers_title: 'Offers',
         offers_intro: 'Choose the program that\'s right for you',
+        offer_1_title: 'Coaching & Support',
+        offer_1_desc: 'Personal 1:1 support for nervous system regulation, stress relief, and personal development. Online and flexible.',
         offer_1_icon: '🎯',
-        offer_1_title: 'Online Coaching',
         offer_1_text: 'Individual 1:1 guidance, flexible and location-independent. We work together on your personal goals and challenges.',
         offer_1_link: 'Learn more →',
+        offer_2_title: 'Massage & Bodywork',
+        offer_2_desc: 'Ayurvedic, Lomi Lomi, and specialized massages for women\'s health. Also suitable for pregnant women.',
         offer_2_icon: '👥',
-        offer_2_title: 'Workshops',
         offer_2_text: 'Interactive workshops in small groups with practical exercises on nervous system regulation and personal growth.',
         offer_2_link: 'View dates →',
+        offer_3_title: 'Maternity Care',
+        offer_3_desc: 'Individual medical care and personal support during pregnancy. Mindful, calm, and on equal footing.',
         offer_3_icon: '📚',
-        offer_3_title: 'Digital Content',
         offer_3_text: 'Learning and practice materials as online courses, videos, and workbooks - at your own pace, available anytime.',
         offer_3_link: 'Explore catalog →',
+        offer_4_title: 'Pregnancy Symptom Relief',
+        offer_4_desc: 'Solutions for pregnancy complaints through understanding, expertise, and personalized support.',
         offer_4_icon: '🌱',
-        offer_4_title: 'Companion Programs',
         offer_4_text: 'Comprehensive, longer-term programs with weekly support, learning materials, and community.',
         offer_4_link: 'Discover programs →',
+        offer_cta: 'Book Appointment →',
         disclaimer: 'Important Note: Our offers are for personal development and do not replace medical, psychotherapeutic, or psychiatric treatment. No healing promises are made.',
 
         // Approach Section
+        approach_section_title: 'Our Approach',
         approach_title: 'Our Approach',
+        approach_1_heading: 'Honest & Transparent',
         approach_1_title: 'Honest & Transparent',
         approach_1_text: 'We work mindfully and with transparency: our offers support personal development. We make no healing promises and do not serve as a substitute for medical or therapeutic professional care.',
+        approach_2_heading: 'Self-Responsibility',
         approach_2_title: 'Self-Responsibility',
         approach_2_text: 'You are responsible for your journey. We guide you with proven methods and support your self-responsibility on the path to well-being and growth.',
+        approach_3_heading: 'Trauma-Informed & Grounded',
         approach_3_title: 'Trauma-Informed & Grounded',
         approach_3_text: 'Our approach is trauma-informed, calm, and grounded. We create a safe space for deep work and respect your boundaries at every moment.',
+        approach_4_heading: 'Holistic',
         approach_4_title: 'Holistic',
         approach_4_text: 'We consider body, mind, and spirit. Nervous system regulation, emotional integration, and personal growth are integrated into all our offerings.',
 
         // News Section
+        news_section_title: 'News & Insights',
         news_title: 'News & Updates',
         news_1_date: 'June 2, 2024',
         news_1_title: 'New Online Course Launching',

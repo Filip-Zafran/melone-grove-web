@@ -326,7 +326,7 @@ section::before {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     color: var(--color-text-primary);
     font-weight: 600;
     font-size: 0.9rem;
@@ -337,11 +337,16 @@ section::before {
 
 .lang-btn:hover {
     background-color: var(--color-bg-secondary);
-    color: var(--color-primary);
 }
 
 .lang-flag {
     font-size: 1.2rem;
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.lang-flag.active {
+    opacity: 1;
 }
 
 .lang-text {
@@ -357,13 +362,10 @@ section::before {
     }
 
     .lang-btn {
-        width: 100%;
+        width: auto;
         justify-content: flex-start;
         padding: var(--spacing-md);
-    }
-
-    .lang-text {
-        display: inline;
+        gap: 12px;
     }
 }
 

@@ -6,7 +6,7 @@
 const translations = {
     de: {
         // Booking Hook Banner
-        booking_hook_text: '✨ Termin buchen',
+        booking_hook_text: 'Termin buchen',
         booking_hook_cta: 'Online Termin vereinbaren',
 
         // Navigation
@@ -148,7 +148,7 @@ const translations = {
 
     en: {
         // Booking Hook Banner
-        booking_hook_text: '✨ Book an Appointment',
+        booking_hook_text: 'Book an Appointment',
         booking_hook_cta: 'Book Appointment Online',
 
         // Navigation
@@ -373,16 +373,16 @@ class LanguageManager {
         const toggleBtn = document.getElementById('langToggle');
         if (!toggleBtn) return;
 
-        const flagSpan = toggleBtn.querySelector('.lang-flag');
-        const textSpan = toggleBtn.querySelector('.lang-text');
+        const deFlag = toggleBtn.querySelector('.lang-de');
+        const enFlag = toggleBtn.querySelector('.lang-en');
 
         if (this.currentLang === 'de') {
-            flagSpan.textContent = '🇩🇪';
-            textSpan.textContent = 'DE';
+            deFlag.classList.add('active');
+            enFlag.classList.remove('active');
             toggleBtn.title = 'Switch to English';
         } else {
-            flagSpan.textContent = '🇬🇧';
-            textSpan.textContent = 'EN';
+            enFlag.classList.add('active');
+            deFlag.classList.remove('active');
             toggleBtn.title = 'Zu Deutsch wechseln';
         }
     }

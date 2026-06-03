@@ -965,7 +965,7 @@ input[type="checkbox"] {
 }
 
 .footer-section h4 {
-    color: var(--color-white);
+    color: var(--color-accent);
     margin-bottom: var(--spacing-md);
     font-size: 1.1rem;
     font-weight: 600;

@@ -997,6 +997,35 @@ input[type="checkbox"] {
     color: var(--color-accent-light);
 }
 
+.ig-link {
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.ig-logo {
+    max-width: 40px;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: var(--transition);
+}
+
+.ig-link:hover .ig-logo {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(196, 165, 123, 0.3));
+}
+
+.footer-link {
+    color: var(--color-accent);
+    transition: var(--transition);
+    display: inline-block;
+    padding: 0.25rem 0;
+}
+
+.footer-link:hover {
+    color: var(--color-accent-light);
+    transform: translateX(4px);
+}
+
 .footer-section ul {
     list-style: none;
 }

@@ -965,22 +965,25 @@ input[type="checkbox"] {
 }
 
 .footer-section h4 {
-    color: var(--color-accent);
+    color: var(--color-white);
     margin-bottom: var(--spacing-md);
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .footer-section p {
-    color: var(--color-bg-primary);
+    color: var(--color-white);
     margin-bottom: var(--spacing-md);
 }
 
 .footer-section a {
-    color: var(--color-accent);
+    color: var(--color-white);
+    transition: var(--transition);
 }
 
 .footer-section a:hover {
-    color: var(--color-accent-light);
+    color: var(--color-accent);
+    text-decoration: underline;
 }
 
 .social-link {
@@ -1015,15 +1018,21 @@ input[type="checkbox"] {
 }
 
 .footer-link {
-    color: var(--color-accent);
+    color: var(--color-white);
     transition: var(--transition);
     display: inline-block;
     padding: 0.25rem 0;
 }
 
 .footer-link:hover {
-    color: var(--color-accent-light);
-    transform: translateX(4px);
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.instagram-section {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
 .footer-section ul {

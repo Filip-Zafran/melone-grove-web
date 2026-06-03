@@ -93,15 +93,18 @@ const translations = {
         form_sending: 'Wird gesendet...',
 
         // Footer
-        footer_title: 'Melone Grove',
-        footer_description: 'Persönliche Entwicklung und Coaching für ein erfülltes Leben.',
-        footer_links: 'Links',
-        footer_legal_impressum: 'Impressum',
-        footer_legal_datenschutz: 'Datenschutzerklärung',
-        footer_legal_agb: 'AGB',
-        footer_legal_cookies: 'Cookie-Einstellungen',
-        footer_contact: 'Kontakt',
+        footer_legal: 'Rechtliches',
+        footer_impressum: 'Impressum',
+        footer_privacy: 'Datenschutzerklärung',
+        footer_terms: 'AGB',
+        footer_cookies: 'Cookie-Einstellungen',
+        footer_contact_title: 'Kontakt',
+        footer_questions: 'Fragen?',
         footer_contact_form: 'Kontaktformular',
+        footer_instagram_title: 'Folgen Uns',
+        footer_websites_title: 'Melanie & Simone',
+        footer_melanie_site: 'Melanie - Official website',
+        footer_simone_site: 'Simone - Official website',
         footer_copyright: '© 2024 Melone Grove. Alle Rechte vorbehalten.',
 
         // Cookie Banner
@@ -205,15 +208,18 @@ const translations = {
         form_sending: 'Sending...',
 
         // Footer
-        footer_title: 'Melone Grove',
-        footer_description: 'Personal development and coaching for a fulfilling life.',
-        footer_links: 'Links',
-        footer_legal_impressum: 'Legal',
-        footer_legal_datenschutz: 'Privacy Policy',
-        footer_legal_agb: 'Terms & Conditions',
-        footer_legal_cookies: 'Cookie Settings',
-        footer_contact: 'Contact',
+        footer_legal: 'Legal',
+        footer_impressum: 'Legal Information',
+        footer_privacy: 'Privacy Policy',
+        footer_terms: 'Terms & Conditions',
+        footer_cookies: 'Cookie Settings',
+        footer_contact_title: 'Contact',
+        footer_questions: 'Questions?',
         footer_contact_form: 'Contact Form',
+        footer_instagram_title: 'Follow Us',
+        footer_websites_title: 'Melanie & Simone',
+        footer_melanie_site: 'Melanie - Official website',
+        footer_simone_site: 'Simone - Official website',
         footer_copyright: '© 2024 Melone Grove. All rights reserved.',
 
         // Cookie Banner

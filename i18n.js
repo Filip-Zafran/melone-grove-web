@@ -16,6 +16,10 @@ const translations = {
         nav_approach: 'Ansatz',
         nav_news: 'News',
         nav_contact: 'Kontakt',
+        nav_members: 'Members',
+
+        // Login
+        login_subtitle: 'Member Login',
 
         // Hero Section
         hero_title: 'Melone Grove',
@@ -158,6 +162,10 @@ const translations = {
         nav_approach: 'Approach',
         nav_news: 'News',
         nav_contact: 'Contact',
+        nav_members: 'Members',
+
+        // Login
+        login_subtitle: 'Member Login',
 
         // Hero Section
         hero_title: 'Melone Grove',

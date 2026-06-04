@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Melone Grove - Member Dashboard">
+    <title>Melone Grove - Member Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dashboard-nav {
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dashboard-nav h2 {
+            color: var(--color-white);
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .logout-btn {
+            background: var(--color-white);
+            color: var(--color-primary);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .logout-btn:hover {
+            background: var(--color-bg-secondary);
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+        }
+
+        .tabs {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+            border-bottom: 2px solid var(--color-border);
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: var(--spacing-md);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+            margin-bottom: -2px;
+        }
+
+        .tab-btn.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        .tab-btn:hover {
+            color: var(--color-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .invoices-grid {
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .invoice-item {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .invoice-item:hover {
+            box-shadow: 0 4px 12px rgba(215, 154, 43, 0.1);
+        }
+
+        .invoice-info h4 {
+            margin: 0 0 var(--spacing-xs) 0;
+        }
+
+        .invoice-info p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .invoice-date {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .invoice-amount {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-right: var(--spacing-md);
+        }
+
+        .download-btn {
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: 0.5rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .download-btn:hover {
+            background: var(--color-accent-light);
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .material-card {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .material-card:hover {
+            box-shadow: 0 8px 24px rgba(215, 154, 43, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .material-icon {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: var(--color-white);
+            padding: var(--spacing-lg);
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .material-content {
+            padding: var(--spacing-md);
+        }
+
+        .material-content h4 {
+            margin: 0 0 var(--spacing-xs) 0;
+            font-size: 1.1rem;
+        }
+
+        .material-type {
+            display: inline-block;
+            background: var(--color-bg-secondary);
+            color: var(--color-text-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .access-expires {
+            background: var(--color-bg-secondary);
+            padding: var(--spacing-sm);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .access-expires.expiring-soon {
+            background: rgba(122, 30, 44, 0.1);
+            color: var(--color-red);
+        }
+
+        .access-btn {
+            width: 100%;
+            padding: var(--spacing-sm);
+            background: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .access-btn:hover {
+            background: var(--color-primary-dark);
+        }
+
+        .calendar-container {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .calendar-header h3 {
+            margin: 0;
+        }
+
+        .calendar-nav {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .calendar-nav button {
+            background: var(--color-bg-secondary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .calendar-nav button:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .calendar-day:hover {
+            background: var(--color-bg-secondary);
+        }
+
+        .calendar-day.has-session {
+            background: var(--color-accent);
+            color: var(--color-white);
+            border-color: var(--color-accent);
+        }
+
+        .calendar-day.selected {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+        }
+
+        .sessions-list {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: var(--spacing-lg);
+        }
+
+        .session-item {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: flex-start;
+        }
+
+        .session-item:last-child {
+            border-bottom: none;
+        }
+
+        .session-time {
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            min-width: 80px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .session-details h4 {
+            margin: 0 0 var(--spacing-xs) 0;
+        }
+
+        .session-details p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .booking-card {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: var(--spacing-lg);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .booking-card:hover {
+            box-shadow: 0 8px 24px rgba(215, 154, 43, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .booking-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .booking-card h3 {
+            margin-top: 0;
+            color: var(--color-primary);
+        }
+
+        .booking-card p {
+            margin-bottom: var(--spacing-md);
+            font-size: 0.95rem;
+        }
+
+        .book-btn {
+            width: 100%;
+            padding: var(--spacing-md);
+            background: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .book-btn:hover {
+            background: var(--color-primary-dark);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-nav {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            .user-info {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .tabs {
+                overflow-x: auto;
+            }
+
+            .calendar-grid {
+                gap: 4px;
+            }
+
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-nav">
+        <h2>Melone Grove Dashboard</h2>
+        <div class="user-info">
+            <div>
+                👤 <span id="userName">Member</span>
+            </div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('invoices')">📄 Invoices</button>
+            <button class="tab-btn" onclick="switchTab('materials')">📚 Materials</button>
+            <button class="tab-btn" onclick="switchTab('sessions')">📅 Sessions</button>
+            <button class="tab-btn" onclick="switchTab('booking')">🎯 Booking</button>
+        </div>
+
+        <!-- Invoices Tab -->
+        <div id="invoices" class="tab-content active">
+            <h2 class="section-title">📄 Invoices & Payments</h2>
+            <div class="invoices-grid">
+                <div class="invoice-item">
+                    <div class="invoice-info">
+                        <h4>Invoice #2025-001</h4>
+                        <p class="invoice-date">2025-01-15</p>
+                        <p>Personal Coaching Program - 3 Months</p>
+                    </div>
+                    <div>
+                        <div class="invoice-amount">€297</div>
+                    </div>
+                    <button class="download-btn">Download PDF</button>
+                </div>
+
+                <div class="invoice-item">
+                    <div class="invoice-info">
+                        <h4>Invoice #2024-012</h4>
+                        <p class="invoice-date">2024-12-15</p>
+                        <p>Group Workshop - Nervensystemregulation</p>
+                    </div>
+                    <div>
+                        <div class="invoice-amount">€67</div>
+                    </div>
+                    <button class="download-btn">Download PDF</button>
+                </div>
+
+                <div class="invoice-item">
+                    <div class="invoice-info">
+                        <h4>Invoice #2024-011</h4>
+                        <p class="invoice-date">2024-11-20</p>
+                        <p>1:1 Session with Melanie</p>
+                    </div>
+                    <div>
+                        <div class="invoice-amount">€89</div>
+                    </div>
+                    <button class="download-btn">Download PDF</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Materials Tab -->
+        <div id="materials" class="tab-content">
+            <h2 class="section-title">📚 Learning Materials</h2>
+            <p>Access expires after 3 months. Materials automatically sent by email.</p>
+
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="material-icon">🎥</div>
+                    <div class="material-content">
+                        <span class="material-type">VIDEO</span>
+                        <h4>Nervensystemregulation 101</h4>
+                        <p>Grundlagen und erste Übungen für Anfänger</p>
+                        <div class="access-expires">✓ Zugang bis 15.04.2025</div>
+                        <button class="access-btn">Watch Video</button>
+                    </div>
+                </div>
+
+                <div class="material-card">
+                    <div class="material-icon">📑</div>
+                    <div class="material-content">
+                        <span class="material-type">PDF</span>
+                        <h4>Atemwork Übungen</h4>
+                        <p>Detaillierte Anleitung mit Bildern</p>
+                        <div class="access-expires">✓ Zugang bis 15.04.2025</div>
+                        <button class="access-btn">Download PDF</button>
+                    </div>
+                </div>
+
+                <div class="material-card">
+                    <div class="material-icon">🎬</div>
+                    <div class="material-content">
+                        <span class="material-type">VIDEO</span>
+                        <h4>Geführte Meditation - 20 Minuten</h4>
+                        <p>Mit Melanie Zervos</p>
+                        <div class="access-expires">✓ Zugang bis 15.04.2025</div>
+                        <button class="access-btn">Watch Video</button>
+                    </div>
+                </div>
+
+                <div class="material-card">
+                    <div class="material-icon">🔗</div>
+                    <div class="material-content">
+                        <span class="material-type">LINK</span>
+                        <h4>Zusätzliche Ressourcen</h4>
+                        <p>Curated Kollektion von empfohlenen Tools</p>
+                        <div class="access-expires expiring-soon">⚠️ Zugang bis 05.04.2025</div>
+                        <button class="access-btn">View Links</button>
+                    </div>
+                </div>
+
+                <div class="material-card">
+                    <div class="material-icon">📚</div>
+                    <div class="material-content">
+                        <span class="material-type">WORKBOOK</span>
+                        <h4>Personal Development Workbook</h4>
+                        <p>Interaktive Übungen und Reflexionen</p>
+                        <div class="access-expires">✓ Zugang bis 15.04.2025</div>
+                        <button class="access-btn">Download PDF</button>
+                    </div>
+                </div>
+
+                <div class="material-card">
+                    <div class="material-icon">🎤</div>
+                    <div class="material-content">
+                        <span class="material-type">AUDIO</span>
+                        <h4>Podcast: Trauma & Healing</h4>
+                        <p>Interview mit Fachexperten</p>
+                        <div class="access-expires">✓ Zugang bis 15.04.2025</div>
+                        <button class="access-btn">Listen Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sessions Tab -->
+        <div id="sessions" class="tab-content">
+            <h2 class="section-title">📅 Your Sessions</h2>
+
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h3 id="currentMonth">January 2025</h3>
+                    <div class="calendar-nav">
+                        <button onclick="previousMonth()">← Previous</button>
+                        <button onclick="nextMonth()">Next →</button>
+                    </div>
+                </div>
+                <div class="calendar-grid" id="calendarGrid"></div>
+            </div>
+
+            <h3 style="color: var(--color-primary);">Upcoming Sessions</h3>
+            <div class="sessions-list">
+                <div class="session-item">
+                    <div class="session-time">
+                        Jan 22<br>14:00
+                    </div>
+                    <div class="session-details">
+                        <h4>1:1 Coaching with Melanie</h4>
+                        <p>Nervensystemregulation & Stressabbau</p>
+                        <p style="color: var(--color-accent); font-weight: 600;">60 minutes • Online</p>
+                    </div>
+                </div>
+
+                <div class="session-item">
+                    <div class="session-time">
+                        Jan 29<br>10:00
+                    </div>
+                    <div class="session-details">
+                        <h4>Group Workshop with Simone</h4>
+                        <p>Schwangerschaftsbegleitung</p>
+                        <p style="color: var(--color-accent); font-weight: 600;">90 minutes • Online</p>
+                    </div>
+                </div>
+
+                <div class="session-item">
+                    <div class="session-time">
+                        Feb 5<br>15:30
+                    </div>
+                    <div class="session-details">
+                        <h4>1:1 with Partner - Couple Session</h4>
+                        <p>mit Melanie & your partner</p>
+                        <p style="color: var(--color-accent); font-weight: 600;">90 minutes • Online</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Tab -->
+        <div id="booking" class="tab-content">
+            <h2 class="section-title">🎯 Book Your Sessions</h2>
+
+            <div class="booking-grid">
+                <div class="booking-card">
+                    <div class="booking-icon">👤</div>
+                    <h3>1:1 Personal Session</h3>
+                    <p>Individual coaching with Melanie or Simone</p>
+                    <p style="color: var(--color-text-secondary); font-size: 0.85rem;">
+                        60 min • €89
+                    </p>
+                    <button class="book-btn" onclick="bookSession('1:1')">Book Now</button>
+                </div>
+
+                <div class="booking-card">
+                    <div class="booking-icon">👥</div>
+                    <h3>Group Workshop</h3>
+                    <p>Interactive group session with practical exercises</p>
+                    <p style="color: var(--color-text-secondary); font-size: 0.85rem;">
+                        90 min • €47
+                    </p>
+                    <button class="book-btn" onclick="bookSession('group')">Book Now</button>
+                </div>
+
+                <div class="booking-card">
+                    <div class="booking-icon">💑</div>
+                    <h3>Couple Session</h3>
+                    <p>1:1 session with your partner or companion</p>
+                    <p style="color: var(--color-text-secondary); font-size: 0.85rem;">
+                        90 min • €149
+                    </p>
+                    <button class="book-btn" onclick="bookSession('couple')">Book Now</button>
+                </div>
+            </div>
+
+            <div style="background: var(--color-bg-secondary); padding: var(--spacing-lg); border-radius: 12px; margin-top: var(--spacing-lg);">
+                <h3 style="color: var(--color-primary); margin-top: 0;">Available Time Slots</h3>
+                <p>Select a session type above to see available dates and times.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        const user = JSON.parse(localStorage.getItem('meloneGrove_user') || 'null');
+        if (!user || !user.loggedIn) {
+            window.location.href = 'login.html';
+        }
+
+        document.getElementById('userName').textContent = user.name;
+
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function logout() {
+            localStorage.removeItem('meloneGrove_user');
+            window.location.href = 'index.html';
+        }
+
+        function bookSession(type) {
+            alert('Booking ' + type + ' session...\n\nThis would connect to a real booking system.');
+        }
+
+        // Calendar functionality
+        let currentDate = new Date(2025, 0, 1);
+
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const daysInMonth = lastDay.getDate();
+            const startingDayOfWeek = firstDay.getDay();
+
+            document.getElementById('currentMonth').textContent = currentDate.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
+
+            const calendarGrid = document.getElementById('calendarGrid');
+            calendarGrid.innerHTML = '';
+
+            // Add empty cells for days before month starts
+            for (let i = 0; i < startingDayOfWeek; i++) {
+                const emptyDay = document.createElement('div');
+                calendarGrid.appendChild(emptyDay);
+            }
+
+            // Add days of month
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.textContent = day;
+
+                // Add sessions on specific dates
+                if ((month === 0 && (day === 22 || day === 29)) || (month === 1 && day === 5)) {
+                    dayElement.classList.add('has-session');
+                }
+
+                calendarGrid.appendChild(dayElement);
+            }
+        }
+
+        function previousMonth() {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        }
+
+        function nextMonth() {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        }
+
+        // Initial calendar render
+        renderCalendar();
+    </script>
+    <script src="i18n.js"></script>
+</body>
+</html>

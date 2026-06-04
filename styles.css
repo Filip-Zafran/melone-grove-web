@@ -20,9 +20,9 @@
     --color-bg-tertiary: #A7A29B;       /* Weiches Steingrau */
 
     /* Text Colors */
-    --color-text-primary: #2B2A28;      /* Tiefes Anthrazit */
-    --color-text-secondary: #A7A29B;    /* Weiches Steingrau */
-    --color-text-light: #C8BBAD;        /* Light neutral */
+    --color-text-primary: #2A3D35;      /* Dark Green (from palette) */
+    --color-text-secondary: #5F7770;    /* Medium Green-Gray */
+    --color-text-light: #8A9B93;        /* Light Green-Gray */
 
     /* Accent Colors */
     --color-green: #3F5A4A;             /* Gedämpftes Waldgrün */

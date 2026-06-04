@@ -273,7 +273,7 @@ section::before {
     font-family: var(--font-serif);
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 .navbar-menu {
@@ -299,13 +299,13 @@ section::before {
 .navbar-menu li a {
     display: block;
     padding: var(--spacing-md);
-    color: var(--color-text-primary);
+    color: var(--color-accent);
     font-weight: 500;
 }
 
 .navbar-menu li a:hover {
     background-color: var(--color-bg-secondary);
-    color: var(--color-primary);
+    color: var(--color-accent-light);
 }
 
 .nav-link {
@@ -326,7 +326,7 @@ section::before {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--color-text-primary);
+    color: var(--color-accent);
     font-weight: 600;
     font-size: 0.9rem;
     padding: var(--spacing-xs) var(--spacing-sm);

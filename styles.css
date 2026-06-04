@@ -138,8 +138,16 @@ section::before {
     top: 0;
     left: 10%;
     right: 10%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(63, 90, 74, 0.2), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(63, 90, 74, 0.3), transparent);
+}
+
+.approach::before {
+    background: linear-gradient(90deg, transparent, rgba(122, 30, 44, 0.2), transparent);
+}
+
+.news::before {
+    background: linear-gradient(90deg, transparent, rgba(215, 154, 43, 0.2), transparent);
 }
 
 /* ============================================================================
@@ -597,11 +605,26 @@ section::before {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(216, 200, 178, 0.8) 100%);
     padding: var(--spacing-lg);
     border-radius: 40px;
-    border-left: none;
-    border-top: 3px solid var(--color-accent);
+    border-left: 6px solid var(--color-accent);
     box-shadow: 0 8px 24px rgba(215, 154, 43, 0.08);
     transition: var(--transition);
     position: relative;
+}
+
+.about-card:nth-child(1) {
+    border-left-color: var(--color-primary);
+}
+
+.about-card:nth-child(2) {
+    border-left-color: var(--color-accent);
+}
+
+.about-card:nth-child(3) {
+    border-left-color: var(--color-primary-light);
+}
+
+.about-card:nth-child(4) {
+    border-left-color: var(--color-red);
 }
 
 .about-card:hover {
@@ -631,6 +654,15 @@ section::before {
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(63, 90, 74, 0.15);
+    border-top: 6px solid var(--color-primary);
+}
+
+.team-card:nth-child(1) {
+    border-top-color: var(--color-primary);
+}
+
+.team-card:nth-child(2) {
+    border-top-color: var(--color-accent);
 }
 
 .team-card:hover {
@@ -718,6 +750,23 @@ section::before {
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(63, 90, 74, 0.2);
+    border-top: 5px solid var(--color-primary);
+}
+
+.offer-card:nth-child(1) {
+    border-top-color: var(--color-primary);
+}
+
+.offer-card:nth-child(2) {
+    border-top-color: var(--color-primary-light);
+}
+
+.offer-card:nth-child(3) {
+    border-top-color: var(--color-accent);
+}
+
+.offer-card:nth-child(4) {
+    border-top-color: var(--color-red);
 }
 
 .offer-card:hover {
@@ -790,6 +839,23 @@ section::before {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(216, 200, 178, 0.8) 100%);
     box-shadow: 0 6px 18px rgba(215, 154, 43, 0.06);
     border: 1px solid rgba(63, 90, 74, 0.15);
+    border-left: 5px solid var(--color-accent);
+}
+
+.approach-item:nth-child(1) {
+    border-left-color: var(--color-primary);
+}
+
+.approach-item:nth-child(2) {
+    border-left-color: var(--color-accent);
+}
+
+.approach-item:nth-child(3) {
+    border-left-color: var(--color-red);
+}
+
+.approach-item:nth-child(4) {
+    border-left-color: var(--color-primary-light);
 }
 
 .approach-item h3 {
@@ -821,8 +887,20 @@ section::before {
     border-radius: 35px;
     box-shadow: 0 6px 18px rgba(215, 154, 43, 0.06);
     transition: var(--transition);
-    border-top: none;
     border: 1px solid rgba(63, 90, 74, 0.2);
+    border-left: 5px solid var(--color-accent);
+}
+
+.news-card:nth-child(1) {
+    border-left-color: var(--color-primary);
+}
+
+.news-card:nth-child(2) {
+    border-left-color: var(--color-primary-light);
+}
+
+.news-card:nth-child(3) {
+    border-left-color: var(--color-red);
 }
 
 .news-card:hover {

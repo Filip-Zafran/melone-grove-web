@@ -3,34 +3,34 @@
    Mobile-first, warm earthy color palette
    ============================================================================ */
 
-/* Color Palette */
+/* Color Palette - Monastic Inspired (Buddhist Monk Robes) */
 :root {
-    /* Primary Colors */
-    --color-primary: #8B7355;           /* Warm brown */
-    --color-primary-light: #A0886D;     /* Lighter warm brown */
-    --color-primary-dark: #6B5344;      /* Darker warm brown */
+    /* Primary Colors - Robe Inspired */
+    --color-primary: #D79A2B;           /* Safran / Gewand-Orange */
+    --color-primary-light: #C18A3C;     /* Gedämpftes Ocker */
+    --color-primary-dark: #7A1E2C;      /* Burgunderrot */
 
     /* Secondary Colors */
-    --color-accent: #C4A57B;            /* Warm gold/beige */
-    --color-accent-light: #D4B896;      /* Light gold */
+    --color-accent: #3F5A4A;            /* Gedämpftes Waldgrün (Accent) */
+    --color-accent-light: #4A6B59;      /* Lighter green */
 
-    /* Background Colors */
-    --color-bg-primary: #FEFDF8;        /* Warm off-white/cream */
-    --color-bg-secondary: #F5F3ED;      /* Light warm gray */
-    --color-bg-tertiary: #EBE8E0;       /* Medium warm gray */
+    /* Background Colors - Neutral Basis */
+    --color-bg-primary: #F3EDE2;        /* Reispapier / Warmes Off-White */
+    --color-bg-secondary: #D8C8B2;      /* Sandstein-Beige */
+    --color-bg-tertiary: #A7A29B;       /* Weiches Steingrau */
 
     /* Text Colors */
-    --color-text-primary: #2C2820;      /* Very dark brown */
-    --color-text-secondary: #5C5651;    /* Medium brown */
-    --color-text-light: #8B8680;        /* Light brown */
+    --color-text-primary: #2B2A28;      /* Tiefes Anthrazit */
+    --color-text-secondary: #A7A29B;    /* Weiches Steingrau */
+    --color-text-light: #C8BBAD;        /* Light neutral */
 
     /* Accent Colors */
-    --color-green: #7A9B78;             /* Soft green */
-    --color-red: #C97676;               /* Soft red/terracotta */
+    --color-green: #3F5A4A;             /* Gedämpftes Waldgrün */
+    --color-red: #7A1E2C;               /* Burgunderrot */
 
     /* Neutral */
     --color-white: #FFFFFF;
-    --color-border: #D9D4CD;
+    --color-border: #D8C8B2;            /* Sandstein-Beige border */
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -139,7 +139,7 @@ section::before {
     left: 10%;
     right: 10%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(196, 165, 123, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(63, 90, 74, 0.2), transparent);
 }
 
 /* ============================================================================
@@ -200,7 +200,7 @@ section::before {
 .booking-hook {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
     padding: var(--spacing-lg) var(--spacing-md);
-    box-shadow: 0 4px 16px rgba(139, 115, 85, 0.2);
+    box-shadow: 0 4px 16px rgba(215, 154, 43, 0.2);
 }
 
 .booking-hook-content {
@@ -236,7 +236,7 @@ section::before {
     cursor: pointer;
     display: inline-block;
     white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(196, 165, 123, 0.25);
+    box-shadow: 0 4px 12px rgba(63, 90, 74, 0.25);
     text-decoration: none;
     border: none;
 }
@@ -244,7 +244,7 @@ section::before {
 .booking-hook-btn:hover {
     background-color: var(--color-accent-light);
     transform: scale(1.04);
-    box-shadow: 0 6px 16px rgba(196, 165, 123, 0.3);
+    box-shadow: 0 6px 16px rgba(63, 90, 74, 0.3);
 }
 
 /* ============================================================================
@@ -513,7 +513,7 @@ section::before {
     left: 0;
     right: 0;
     height: 100px;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100"><path d="M0,50 Q300,25 600,50 T1200,50 L1200,100 L0,100 Z" fill="rgba(196,165,123,0.05)"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100"><path d="M0,50 Q300,25 600,50 T1200,50 L1200,100 L0,100 Z" fill="rgba(63,90,74,0.05)"/></svg>');
     background-size: cover;
     pointer-events: none;
 }
@@ -594,12 +594,12 @@ section::before {
 }
 
 .about-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 243, 237, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(216, 200, 178, 0.8) 100%);
     padding: var(--spacing-lg);
     border-radius: 40px;
     border-left: none;
     border-top: 3px solid var(--color-accent);
-    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.08);
+    box-shadow: 0 8px 24px rgba(215, 154, 43, 0.08);
     transition: var(--transition);
     position: relative;
 }
@@ -623,14 +623,14 @@ section::before {
 }
 
 .team-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 243, 237, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(216, 200, 178, 0.85) 100%);
     border-radius: 40px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.08);
+    box-shadow: 0 8px 24px rgba(215, 154, 43, 0.08);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(196, 165, 123, 0.15);
+    border: 1px solid rgba(63, 90, 74, 0.15);
 }
 
 .team-card:hover {
@@ -709,15 +709,15 @@ section::before {
 }
 
 .offer-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 243, 237, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(216, 200, 178, 0.7) 100%);
     padding: var(--spacing-lg);
     border-radius: 35px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(139, 115, 85, 0.07);
+    box-shadow: 0 6px 20px rgba(215, 154, 43, 0.07);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(196, 165, 123, 0.2);
+    border: 1px solid rgba(63, 90, 74, 0.2);
 }
 
 .offer-card:hover {
@@ -740,7 +740,7 @@ section::before {
     width: auto;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 4px 8px rgba(139, 115, 85, 0.1));
+    filter: drop-shadow(0 4px 8px rgba(215, 154, 43, 0.1));
 }
 
 .offer-card h3 {
@@ -787,9 +787,9 @@ section::before {
 .approach-item {
     padding: var(--spacing-lg);
     border-radius: 35px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 243, 237, 0.8) 100%);
-    box-shadow: 0 6px 18px rgba(139, 115, 85, 0.06);
-    border: 1px solid rgba(196, 165, 123, 0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(216, 200, 178, 0.8) 100%);
+    box-shadow: 0 6px 18px rgba(215, 154, 43, 0.06);
+    border: 1px solid rgba(63, 90, 74, 0.15);
 }
 
 .approach-item h3 {
@@ -816,13 +816,13 @@ section::before {
 }
 
 .news-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 243, 237, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(216, 200, 178, 0.75) 100%);
     padding: var(--spacing-lg);
     border-radius: 35px;
-    box-shadow: 0 6px 18px rgba(139, 115, 85, 0.06);
+    box-shadow: 0 6px 18px rgba(215, 154, 43, 0.06);
     transition: var(--transition);
     border-top: none;
-    border: 1px solid rgba(196, 165, 123, 0.2);
+    border: 1px solid rgba(63, 90, 74, 0.2);
 }
 
 .news-card:hover {
@@ -858,11 +858,11 @@ section::before {
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 243, 237, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(216, 200, 178, 0.8) 100%);
     padding: var(--spacing-xl);
     border-radius: 40px;
-    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.08);
-    border: 1px solid rgba(196, 165, 123, 0.15);
+    box-shadow: 0 8px 24px rgba(215, 154, 43, 0.08);
+    border: 1px solid rgba(63, 90, 74, 0.15);
 }
 
 .form-group {
@@ -898,7 +898,7 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: var(--spacing-md);
-    border: 2px solid rgba(196, 165, 123, 0.3);
+    border: 2px solid rgba(63, 90, 74, 0.3);
     border-radius: 20px;
     font-family: var(--font-sans);
     font-size: 1rem;
@@ -912,7 +912,7 @@ input[type="email"]:focus,
 textarea:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+    box-shadow: 0 0 0 3px rgba(215, 154, 43, 0.1);
 }
 
 input[type="checkbox"] {
@@ -936,16 +936,16 @@ input[type="checkbox"] {
 
 .form-message.success {
     display: block;
-    background-color: #E8F5E9;
-    color: #2E7D32;
-    border: 1px solid #A5D6A7;
+    background-color: rgba(63, 90, 74, 0.1);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
 }
 
 .form-message.error {
     display: block;
-    background-color: #FFEBEE;
-    color: #C62828;
-    border: 1px solid #EF9A9A;
+    background-color: rgba(122, 30, 44, 0.1);
+    color: var(--color-red);
+    border: 1px solid var(--color-red);
 }
 
 /* ============================================================================
@@ -1015,7 +1015,7 @@ input[type="checkbox"] {
 
 .ig-link:hover .ig-logo {
     transform: scale(1.1);
-    filter: drop-shadow(0 4px 8px rgba(196, 165, 123, 0.3));
+    filter: drop-shadow(0 4px 8px rgba(63, 90, 74, 0.3));
 }
 
 .footer-link {
